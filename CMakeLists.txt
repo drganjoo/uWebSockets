@@ -40,5 +40,7 @@ endif (UNIX)
 
 if (MINGW)
 target_link_libraries (uWS LINK_PUBLIC ws2_32)
+install (TARGETS uWS DESTINATION C:/msys64/mingw32/lib/)
+install (FILES src/Extensions.h src/WebSocketProtocol.h src/Networking.h src/WebSocket.h src/Hub.h src/Group.h src/Node.h src/Socket.h src/HTTPSocket.h src/uWS.h src/uUV.h DESTINATION C:/msys64/mingw32/include/uWS)
 endif(MINGW)
 
